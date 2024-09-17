@@ -1,0 +1,180 @@
+@import './globals';
+// header
+
+header {
+    width: 100vw;
+    max-width: 100%;
+    aspect-ratio: 21/9;  
+    background: url(./images/hero.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    color: $white; 
+    gap: 0; 
+    text-align: center; 
+    padding-block-end: 3rem; 
+    padding-inline: 1rem;
+    max-height: 65vh;  
+}
+
+.header-title {
+    font-family: 'Rozha one', serif;   
+    // font-family: 'berkshire swash', serif;
+    font-size: 4.5rem;    
+    margin-block-end: 0; 
+}
+
+.header-subtitle {
+    margin-block-start: 0;
+    font-size: 1rem;       
+    letter-spacing: .1rem;
+}
+
+// main
+
+.main {
+    padding: 5rem 1rem;
+}
+
+.main-heading {
+    // border-bottom: .3rem solid $dark-pink;
+    width: max-content;
+    // color: $greyish-blue; 
+    margin: auto;
+    color: $dark-pink; 
+}
+
+.category-cards { 
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 1rem;  
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;  
+    max-width: 1200px;
+    margin-block: 5rem;    
+    margin-inline: auto; 
+}
+
+.card-container {
+    // background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 300px;
+    height: 400px; 
+}
+
+@mixin card-background($img) {
+    background: $img no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+$makeup-card: url(./images/makeup-card.jpg);
+$perfumes-card: url(./images/perfumes-card.jpg);
+$skincare-card: url(./images/skincare-card.jpg);
+
+.inner-card {
+    width: 100%; 
+    aspect-ratio: 5/4;  
+    border-radius: 1rem; 
+    position: relative;
+}
+
+.inner-card--makeup {
+    @include card-background(($makeup-card));
+}  
+
+.inner-card--perfumes {
+    @include card-background(($perfumes-card));
+}
+
+.inner-card--skincare {
+    @include card-background(($skincare-card));
+}
+
+.card-link {
+    position: absolute; 
+    background: transparent;
+    background-color: $white;   
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    aspect-ratio: 1; 
+    border-top-left-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+.card-icon {
+    background:url(./images/arrow-icon.png) no-repeat $dark-pink;
+    background-position: center;
+    // background-size: cover;
+    border-radius: 50%;
+    width: 80%;
+    aspect-ratio: 1;
+    position: relative;
+    transition: .3s; 
+
+
+    &:hover {
+        background: url(./images/arrow-icon.png) no-repeat $greyish-blue;
+        background-position: center;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 30%; 
+        aspect-ratio: 1;   
+        background-color: transparent; 
+        border-bottom-right-radius: 1rem;  
+        bottom: -14%;         
+        left: -43%;       
+        box-shadow: 10px 0px 0 $white;          
+    }
+
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 30%; 
+        aspect-ratio: 1;    
+        background-color: transparent;   
+        border-bottom-right-radius: 1rem;  
+        top: -41%;                   
+        right: -14%;  
+        box-shadow: 0px 10px  0 $white;           
+    }
+}
+ 
+.category-name {
+    margin-block: .5rem 0;  
+    text-transform: capitalize; 
+    color: $dark-pink; 
+    // font-weight: normal;   
+}
+
+.category-subtitle  {
+    margin-block: 0; 
+    font-size: 1rem;   
+    font-weight: normal; 
+}
+
+// media queries
+
+@media screen and (min-width: 600px) {
+    .header-title {    
+        font-size: 8rem;
+    }
+
+    .header-subtitle { 
+        font-size: 1.6rem; 
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product page | utsukushii online beauty shop</title>
+    <link rel="stylesheet" href="./product-page.css">
+    <script defer src="./app.js"></script>
+    <script defer src="product-page.js"></script>
+    <script defer src="./cart.js"></script>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    
+  <nav>
+    <div class="upper-group">
+        <button class="menu"></button>
+
+        <div class="desktop-menu">
+            <a class="brand-name" href="./index.html">utsukushii</a>
+  
+            <div class="nav-wrapper">
+              <ul class="nav-links">
+                 <li><a href="./makeup.html" class="nav-link">makeup</a></li>
+                 <li><a href="./perfumes.html" class="nav-link">perfumes</a></li>
+                 <li><a href="./skincare.html" class="nav-link">skincare</a></li>
+              </ul>
+      
+            </div>
+        </div>
+        
+        <button class="cart">
+            <div class="cart-quantity hide"></div>
+        </button>
+     
+    </div>
+    
+    <div class="mobile-menu hide"> 
+        <ul class="nav-links nav-links--mobile">
+            <li><a href="./makeup.html" class="nav-link nav-link--mobile">makeup</a></li>
+            <li><a href="./perfumes.html" class="nav-link nav-link--mobile">perfumes</a></li>
+            <li><a href="./skincare.html" class="nav-link nav-link--mobile">skincare</a></li>
+         </ul>
+    </div>
+
+    <div class="cart-menu hide"> 
+        <button class="close-cart"></button>
+         <!-- empty cart  -->
+         <div class="empty-cart"> 
+           <p class="empty-cart-message">
+            Your cart is empty. Let's go shopping!
+           </p>
+         </div> 
+         <!-- full cart -->
+          <div class="full-cart hide">
+            <div class="cart-details">
+              <img class="item-img" src="./images/product1.jpg" alt="item imge">
+              <p class="item-quantity">1</p>
+              <p class="item-price">$10.99</p>
+            </div>
+           <p class="cart-total">Total: </p>
+           <button class="checkout">Checkout</button>
+            </div>
+          
+  </div>
+
+</nav>
+
+    <main>
+      <section class="product-section">
+        <div class="img-group">
+           <div class="main-img">
+             <div class="arrow-btns">
+                <div class="btn-wrapper">
+                    <button class="prev-img"></button>
+                </div>
+               <div class="btn-wrapper">
+                <button class="next-img"></button> 
+               </div>
+             </div>
+             </div>
+        </div>
+
+        <div class="txt-group">
+          <h1 class="product-name">Product</h1>
+          <p class="description">Lorem ipsum dolor sit amet, sine vi non scio quomodo me annihilare; aqua et ignis utrumque destruunt, utrumque creant, fames me submergit, desiderium meum urit.</p>
+          <h2 class="price">$ 20.55</h2> 
+
+          <form class="cart-form">
+            <div class="quantity-group">
+              <label for="quantity">Quantity:</label> 
+              <input type="number" required placeholder="1" name="quantity" id="quantity" min="0">  
+            </div> 
+            <button class="add-to-cart"> <img src="./images/cart-white.png" alt="cart icon"> 
+              add to cart</button>
+          </form> 
+        </div>
+      </section>
+
+      <section class="reviews">
+        <h1 class="reviews-heading">Reviews</h1>
+          <div class="review-card">
+            <h2 class="user-name">Jasminda Beauregard</h2>
+            <p class="rating">⭐⭐⭐</p>
+            <p class="review">Lorem ipsum dolor sit amet, mundus est vulnus apertum. Mundus est putrescens, et amo illud. Vocem tuam audivi in vento per flores cerasi flante, spiritum tuum audivi in aura maris, pulsationem cordis tui per terram resonantem sensi.</p>
+          </div>
+
+          <div class="review-card">
+            <h2 class="user-name">Eugène Lacroix</h2>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+            <p class="review">Quid facimus cum omni hac dolore? Quid facimus cum omni hac laetitia, quae sapit prorsus ut dolor? Quomodo omnem sanguinem abluimus, eius splendorem et gloriam, eius horrorem et sanctitatem, a cordibus nostris gravibus?</p>
+          </div> 
+            
+          <div class="review-card">
+            <h2 class="user-name">Callysta Mongroove</h2>
+            <p class="rating">⭐⭐⭐⭐</p>
+            <p class="review">Pulvis tuus iam non potest flere. Ego pro te flebo. Aedificabo sanctuarium igni, quamquam flammae iam diu mortuae sunt.</p>
+          </div>
+      </section>
+    </main>
+
+    
+    <footer> 
+        <section class="newsletter">
+           <p class="newsletter-heading">Stay in touch! Sign up to the newsletter to receive all the news and never miss our deals and offers</p>
+           <form class="newsletter-form" novalidate> 
+            <div class="email-input-wrapper">
+                <input id="user-email" type="email" placeholder="enter your email"> 
+                <p class="email-error-msg hide">Oops! it looks like this address is not valid</p>
+            </div>
+             <button type="submit" class="newsletter-btn">subscribe</button>
+           </form>
+        </section>
+
+
+
+        <ul class="footer-links">
+            <li><a class="footer-link" href="./faq.html">FAQ</a></li>
+            <li><a class="footer-link" href="./contacts.html">Contacts</a></li>
+            <li><a class="footer-link" href="./shipping.html">Shipping Info</a></li>
+            <li><a class="footer-link" href="./credits.html">Credits & Disclaimer</a></li>
+        </ul>
+
+        <section class="attribution">
+            <p>project by <a href="https://github.com/tortaruga" target="_blank">tortaruga</a></p>
+        </section>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | utsukushii online beauty shop</title>
+    <link rel="stylesheet" href="./faq.css">
+    <script defer src="./app.js"></script>
+    <script defer src="./faq.js"></script>
+    <script defer src="./cart.js"></script>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+   </head>
+<body>
+   <nav>
+      <div class="upper-group">
+          <button class="menu"></button>
+
+          <div class="desktop-menu">
+              <a class="brand-name" href="./index.html">utsukushii</a>
+    
+              <div class="nav-wrapper">
+                <ul class="nav-links">
+                   <li><a href="./makeup.html" class="nav-link">makeup</a></li>
+                   <li><a href="./perfumes.html" class="nav-link">perfumes</a></li>
+                   <li><a href="./skincare.html" class="nav-link">skincare</a></li>
+                </ul>
+        
+              </div>
+          </div>
+          
+          <button class="cart">
+              <div class="cart-quantity hide"></div>
+          </button>
+       
+      </div>
+      
+      <div class="mobile-menu hide"> 
+          <ul class="nav-links nav-links--mobile">
+              <li><a href="./makeup.html" class="nav-link nav-link--mobile">makeup</a></li>
+              <li><a href="./perfumes.html" class="nav-link nav-link--mobile">perfumes</a></li>
+              <li><a href="./skincare.html" class="nav-link nav-link--mobile">skincare</a></li>
+           </ul>
+      </div>
+
+      <div class="cart-menu hide"> 
+          <button class="close-cart"></button>
+           <!-- empty cart  -->
+           <div class="empty-cart"> 
+             <p class="empty-cart-message">
+              Your cart is empty. Let's go shopping!
+             </p>
+           </div> 
+           <!-- full cart -->
+            <div class="full-cart hide">
+              <div class="cart-details">
+                <img class="item-img" src="./images/product1.jpg" alt="item imge">
+                <p class="item-quantity">1</p>
+                <p class="item-price">$10.99</p>
+              </div>
+             <p class="cart-total">Total: </p>
+             <button class="checkout">Checkout</button>
+              </div>
+            
+    </div>
+  
+  </nav>
+
+    <main>
+        <h1 class="main-heading">FAQ</h1> 
+        <section class="container">
+           <div class="question-wrapper">
+             <label for="question1">
+                <h2 class="question">I made an order that never arrived. what now?</h2>
+             </label>
+             <p class="answer hide">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+             <div class="btn-wrapper">
+                <button id="question1" class="show-answer"></button>
+             </div> 
+           </div>
+
+           <div class="question-wrapper">
+            <label for="question2">
+               <h2 class="question">How can I return an article?</h2>
+            </label>
+            <p class="answer hide">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <div class="btn-wrapper">
+               <button id="question2" class="show-answer"></button>
+            </div>
+          </div>
+
+          <div class="question-wrapper">
+            <label for="question3">
+               <h2 class="question">What do I do if the package I received was damaged?</h2>
+            </label>
+            <p class="answer hide">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+            <div class="btn-wrapper">
+               <button id="question3" class="show-answer"></button>
+            </div> 
+          </div>
+
+        </section>
+
+        <p>Didn't find the answer to your question? Contact our customer service: <a href="mailto:utsukushii.customerservice@gfemail.moc">utsukushii.customerservice@gfemail.moc</a></p>
+    </main>
+
+    <footer> 
+        <section class="newsletter">
+           <p class="newsletter-heading">Stay in touch! Sign up to the newsletter to receive all the news and never miss our deals and offers</p>
+           <form class="newsletter-form" novalidate> 
+            <div class="email-input-wrapper">
+                <input id="user-email" type="email" placeholder="enter your email"> 
+                <p class="email-error-msg hide">Oops! it looks like this address is not valid</p>
+            </div>
+             <button type="submit" class="newsletter-btn">subscribe</button>
+           </form>
+        </section>
+
+
+
+        <ul class="footer-links">
+            <li><a class="footer-link" href="./faq.html">FAQ</a></li>
+            <li><a class="footer-link" href="./contacts.html">Contacts</a></li>
+            <li><a class="footer-link" href="./shipping.html">Shipping Info</a></li>
+            <li><a class="footer-link" href="./credits.html">Credits & Disclaimer</a></li>
+        </ul>
+
+        <section class="attribution">
+            <p>project by <a href="https://github.com/tortaruga" target="_blank">tortaruga</a></p>
+        </section>
+    </footer>
+
+</body>
+</html>

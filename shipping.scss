@@ -1,0 +1,23 @@
+@import 'globals.scss'; 
+
+main {
+    padding: 4rem 1rem; 
+    max-width: 800px; 
+} 
+
+main a {
+    color: $greyish-blue;
+    &:hover {
+        color: $dark-pink; 
+    }
+}
+ 
+.main-heading { 
+    font-size: 3rem;
+}
+ 
+@media screen and (min-width: 600px) {
+    main {
+        padding-inline: 4rem;
+    }
+}

@@ -1,0 +1,116 @@
+@import 'shipping.scss';
+
+main {
+    margin: auto;
+}
+
+.main-heading { 
+ text-align: center;
+ letter-spacing: .5rem;  
+}
+
+.container {
+    padding: 1rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+    justify-content: center;
+    margin-block: 4rem;
+}
+
+.question-wrapper {
+    background: url(./images/hero.jpg) no-repeat; 
+    position: relative;
+    border-radius: 1.5rem;   
+    padding: 1rem; 
+}
+
+.btn-wrapper { 
+    position: absolute;
+    border-top-left-radius: 50%; 
+    background-color: $white; 
+    width: 4rem;     
+    aspect-ratio: 1;  
+    z-index: 1000000; 
+    bottom: 0;  
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+    &::after {
+        content: '';
+        position: absolute;
+        background: transparent; 
+        width: 1.5rem; 
+        aspect-ratio: 1;
+        border-bottom-right-radius: 50%;  
+        right: 100%;     
+        bottom: 0%;   
+        box-shadow: 0 10px 0 $white;
+    }
+ 
+    &::before {
+        content: '';
+        position: absolute;
+        background: transparent;  
+        width: 1.5rem; 
+        aspect-ratio: 1;
+        border-bottom-right-radius: 50%;   
+        right: 0%;     
+        bottom: 100%;         
+        box-shadow: 0 10px 0 $white;      
+    }
+} 
+
+.show-answer {
+    border-radius: 50%;
+    width: 70%;   
+    aspect-ratio: 1;
+    background: url(./images/plus-white.png) no-repeat $greyish-blue;   
+    background-position: center; 
+    background-size: cover;   
+    transition: .3s; 
+
+    &:hover {
+        background: url(./images/plus-white.png) no-repeat $dark-pink;   
+    background-position: center;   
+    background-size: cover;   
+    }
+}
+
+.show-answer.minus {
+    background: url(./images/minus-white.png) no-repeat $greyish-blue;   
+    background-position: center; 
+    background-size: cover; 
+    
+    &:hover { 
+        background: url(./images/minus-white.png) no-repeat $dark-pink;   
+    background-position: center;   
+    background-size: cover;   
+    } 
+}
+
+label {
+    cursor: pointer; 
+}
+
+.question {
+    font-size: 1.2rem;
+    color: $greyish-blue;
+    color: $dark-pink;
+    max-width: 85%; 
+    transition: .3s; 
+ 
+    &:hover {
+        color: $greyish-blue;  
+    }   
+}
+
+.answer {
+    // display: none; 
+    font-size: .9rem; 
+    max-width: 80%;   
+    color: $white; 
+}
